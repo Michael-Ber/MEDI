@@ -1,0 +1,24 @@
+@import 'components/variables/variables';
+@import 'components/mixins/mixins';
+@import 'blocks/contacts/contacts';
+@import 'blocks/footer/footer';
+@import 'blocks/header/header';
+@import 'blocks/innovation/innovation';
+@import 'blocks/intro/intro';
+@import 'blocks/news/news';
+@import 'blocks/offer/offer';
+@import 'components/sizes/sizes';
+@import 'components/fonts/fonts';
+
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gilroy';
+}
+
+.container {
+    max-width: 1295px;
+    margin: 0 auto;
+}
