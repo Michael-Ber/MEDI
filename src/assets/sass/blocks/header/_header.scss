@@ -2,17 +2,18 @@
     &__wrapper {
         position: relative;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
         height: 90px;
-        &::before {
-            content: '';
-            width: 1px;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            background-color: rgba(#c4c4c4, .5);
+    }
+    &__logo:hover {
+        img {
+            transform: scale(1.2);
+            transition: .3s all;
+        }
+        span {
+            color: $secondary-color;
+            transition: .3s all;
         }
     }
     &__elem {
@@ -20,28 +21,52 @@
         justify-content: center;
         align-items: center;
         position: relative;
+        height: 100%;
+        cursor: pointer;
+        &:first-child {
+            &::before {
+                content: '';
+                width: 1px;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: -25px;
+                background-color: rgba(#c4c4c4, .5); 
+            }
+        }
         &::after {
             content: '';
             width: 1px;
             height: 100%;
             position: absolute;
             top: 0;
-            right: -35px;
+            right: -25px;
             background-color: rgba(#c4c4c4, .5); 
         }
         .medi {
             font-family: 'Times New Roman', Times, serif;
             margin-left: 8px;
         }
-        &:first-child {
-            margin-left: 35px;
-        }
         span {
             text-align: center;
         }
-        
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        &:hover {
+            svg path{
+                fill: red;
+                transition: .2s all;
+            }
+        }
+        &-tel {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
     }
-    &__cursor {
+    &__saloons {
         position: relative;
         width: 20px;
         height: 20px;
@@ -49,6 +74,10 @@
         background-color: $main-color;
         margin-left: 15px;
         cursor: pointer;
+        &:hover {
+            transition: .2s all;
+            background-color: red;
+        }
         .pointer {
             position: absolute;
             top: 60%;
@@ -71,6 +100,9 @@
         border: none;
         border-radius: 1px;
         cursor: pointer;
+        &:hover {
+            background-color: darken($secondary-color, 5%);
+        }
         span {
             margin-left: 10px;
         }
