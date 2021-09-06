@@ -87,6 +87,138 @@
   .header__btn span {
     margin-left: 10px; }
 
+.innovation {
+  padding: 80px 0; }
+  .innovation__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; }
+  .innovation__course {
+    width: 526px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #00868a; }
+    .innovation__course-content {
+      padding: 35px 0 0 40px; }
+    .innovation__course-head span {
+      padding: 10px 15px;
+      background-color: #4fbfa5;
+      color: #fff; }
+    .innovation__course-title {
+      color: #fff;
+      line-height: 40px;
+      margin-top: 30px; }
+    .innovation__course-details {
+      display: flex;
+      align-items: center;
+      margin-top: 25px; }
+      .innovation__course-details__btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 40px;
+        border: 1px solid #fff;
+        cursor: pointer;
+        background-color: transparent; }
+        .innovation__course-details__btn:hover {
+          border-color: #b3b3b3; }
+          .innovation__course-details__btn:hover i {
+            background-color: #b3b3b3; }
+            .innovation__course-details__btn:hover i::after {
+              background-color: #b3b3b3; }
+            .innovation__course-details__btn:hover i::before {
+              background-color: #b3b3b3; }
+        .innovation__course-details__btn i {
+          position: relative;
+          width: 20px;
+          height: 1px;
+          background-color: #fff; }
+          .innovation__course-details__btn i::after {
+            content: '';
+            height: 8px;
+            width: 1px;
+            background-color: #fff;
+            position: absolute;
+            top: -1px;
+            right: 2px;
+            transform: rotate(45deg); }
+          .innovation__course-details__btn i::before {
+            content: '';
+            height: 8px;
+            width: 1px;
+            background-color: #fff;
+            position: absolute;
+            top: -6px;
+            right: 2px;
+            transform: rotate(-45deg); }
+      .innovation__course-details strong {
+        text-transform: uppercase;
+        color: #fff;
+        margin-left: 20px;
+        cursor: pointer; }
+        .innovation__course-details strong:hover {
+          text-decoration: underline; }
+    .innovation__course-img {
+      width: 100%;
+      margin-top: 45px; }
+      .innovation__course-img img {
+        display: block;
+        width: 100%;
+        height: 230px;
+        object-fit: cover; }
+  .innovation__patent {
+    width: 636px;
+    padding-top: 35px; }
+    .innovation__patent-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start; }
+    .innovation__patent-head span {
+      padding: 10px 15px;
+      background-color: #4fbfa5;
+      color: #fff; }
+    .innovation__patent-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      margin-top: 50px; }
+    .innovation__patent-amount__item {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      position: relative; }
+      .innovation__patent-amount__item-num {
+        font-size: 48px;
+        color: rgba(0, 0, 0, 0.3);
+        margin-right: 18px; }
+      .innovation__patent-amount__item-text {
+        width: 145px;
+        font-size: 14px;
+        line-height: 21px;
+        color: rgba(0, 0, 0, 0.3); }
+      .innovation__patent-amount__item:nth-child(n):not(:last-child) {
+        margin-bottom: 35px; }
+      .innovation__patent-amount__item_big .innovation__patent-amount__item-num {
+        font-size: 96px;
+        font-weight: 500;
+        color: #00868a; }
+      .innovation__patent-amount__item_big .innovation__patent-amount__item-text {
+        width: 50%;
+        color: #000;
+        font-size: 28px;
+        font-weight: 500;
+        line-height: 42px;
+        z-index: 10; }
+    .innovation__patent-certificate {
+      position: absolute;
+      top: -10px;
+      right: 0;
+      z-index: 5; }
+
 .intro {
   background-color: #4fbfa5;
   padding-top: 30px; }
