@@ -60,6 +60,48 @@
         .contacts__address-item button:hover {
           background-color: #005457; }
 
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.footer__item {
+  width: 25%; }
+  .footer__item-socials {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+  .footer__item-icon {
+    cursor: pointer; }
+    .footer__item-icon:hover svg path {
+      fill: red;
+      transition: .2s all; }
+  .footer__item-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    padding: 0 15px;
+    color: #fff;
+    font-weight: 500;
+    text-transform: uppercase;
+    background-color: #00868a;
+    border: none;
+    border-radius: 1px;
+    cursor: pointer; }
+    .footer__item-btn:hover {
+      background-color: #006d71; }
+    .footer__item-btn span {
+      margin-left: 10px; }
+  .footer__item-politic {
+    text-decoration: none;
+    color: #000;
+    font-size: 12px; }
+    .footer__item-politic:hover {
+      text-decoration: underline; }
+  .footer__item:nth-child(2) {
+    text-align: center; }
+
 .header__wrapper {
   position: relative;
   display: flex;
@@ -136,7 +178,7 @@
   justify-content: center;
   align-items: center;
   height: 40px;
-  padding: 12px 15px;
+  padding: 0 15px;
   color: #fff;
   font-weight: 500;
   text-transform: uppercase;
