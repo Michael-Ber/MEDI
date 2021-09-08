@@ -1,0 +1,101 @@
+.offer {
+    background: linear-gradient(to bottom, rgba($secondary-color, .1) 62%, #fff 38%);
+    &__title {
+        color: $secondary-color;
+        text-align: center;
+        padding-top: 80px;
+        margin-top: 100px;
+    }
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-top: 60px;
+        &-elem {
+            position: relative;
+            width: 306px;
+            &-head {
+                position: absolute;
+                top: 30px;
+                left: 30px;
+                color: #fff;
+                span {
+                    background-color: $main-color;
+                    padding: 10px 15px;
+                }
+            }
+            &-img {
+                height: 220px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            &-details {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: $secondary-color;
+                padding: 25px 30px;
+                &:hover{
+                    .offer__items-elem-details__btn {
+                        border-color: darken(#fff, 30%);
+                        i {
+                            background-color: darken(#fff, 30%);
+                            &::after {
+                                background-color: darken(#fff, 30%);
+                            }
+                            &::before {
+                                background-color: darken(#fff, 30%);
+                            }
+                        }
+                    }
+                    strong {
+                        color: darken(#fff, 30%);
+                    }
+                }
+                &__btn {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 50px;
+                    height: 40px;
+                    border: 1px solid #fff;
+                    cursor: pointer;
+                    background-color: transparent;
+                    i {
+                        position: relative;
+                        width: 20px;
+                        height: 1px;
+                        background-color: #fff;
+                        &::after {
+                            content: '';
+                            height: 8px;
+                            width: 1px;
+                            background-color: #fff;
+                            position: absolute;
+                            top: -1px;
+                            right: 2px;
+                            transform: rotate(45deg);
+                        }
+                        &::before {
+                            content: '';
+                            height: 8px;
+                            width: 1px;
+                            background-color: #fff;
+                            position: absolute;
+                            top: -6px;
+                            right: 2px;
+                            transform: rotate(-45deg);
+                        }
+                    }
+                }
+                strong {
+                    color: #fff;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
