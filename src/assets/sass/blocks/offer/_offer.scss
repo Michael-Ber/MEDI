@@ -1,10 +1,10 @@
 .offer {
     background: linear-gradient(to bottom, rgba($secondary-color, .1) 62%, #fff 38%);
+    margin-top: 100px;
     &__title {
         color: $secondary-color;
         text-align: center;
         padding-top: 80px;
-        margin-top: 100px;
     }
     &__items {
         display: flex;

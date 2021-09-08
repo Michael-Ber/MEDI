@@ -1,0 +1,79 @@
+.contacts {
+    padding-top: 100px;
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    &__links {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        width: calc(75% - 25px);
+    }
+    &__link {
+        margin-right: 190px;
+        margin-bottom: 30px;
+        &:nth-child(3n+3) {
+            margin-right: 10px;
+        }
+        &-title {
+            font-size: 21px;
+            margin: 0;
+        }
+        &-wrapper {
+            margin-top: 20px;
+            padding: 0;
+        }
+        &-item {
+            font-size: 14px;
+            list-style-type: none;
+            a {
+                text-decoration: none;
+                color: #000;
+                &:hover {
+                    text-decoration: underline;
+                } 
+            }
+            &:nth-child(n):not(:last-child) {
+                margin-bottom: 15px;
+            }
+        }
+    }
+    &__address {
+        width: calc(25% - 25px);
+        margin-top: 10px;
+        &-item {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            &:nth-child(n):not(:first-child) {
+                margin-top: 30px;
+            }
+            span {
+                font-size: 11px;
+                color: rgba(#000, .5);
+                text-transform: uppercase;
+            }
+            strong {
+                font-size: 21px;
+                margin-top: 10px;
+            }
+            button {
+                background-color: $secondary-color;
+                border: none;
+                margin-top: 15px;
+                font-size: 14px;
+                text-transform: uppercase;
+                padding: 12px 25px;
+                color: #fff;
+                cursor: pointer;
+                &:hover {
+                    background-color: darken($secondary-color, 10%);
+                }
+            }
+        }
+    }
+}

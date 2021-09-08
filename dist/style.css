@@ -1,3 +1,65 @@
+.contacts {
+  padding-top: 100px; }
+  .contacts__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; }
+  .contacts__links {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: calc(75% - 25px); }
+  .contacts__link {
+    margin-right: 190px;
+    margin-bottom: 30px; }
+    .contacts__link:nth-child(3n+3) {
+      margin-right: 10px; }
+    .contacts__link-title {
+      font-size: 21px;
+      margin: 0; }
+    .contacts__link-wrapper {
+      margin-top: 20px;
+      padding: 0; }
+    .contacts__link-item {
+      font-size: 14px;
+      list-style-type: none; }
+      .contacts__link-item a {
+        text-decoration: none;
+        color: #000; }
+        .contacts__link-item a:hover {
+          text-decoration: underline; }
+      .contacts__link-item:nth-child(n):not(:last-child) {
+        margin-bottom: 15px; }
+  .contacts__address {
+    width: calc(25% - 25px);
+    margin-top: 10px; }
+    .contacts__address-item {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start; }
+      .contacts__address-item:nth-child(n):not(:first-child) {
+        margin-top: 30px; }
+      .contacts__address-item span {
+        font-size: 11px;
+        color: rgba(0, 0, 0, 0.5);
+        text-transform: uppercase; }
+      .contacts__address-item strong {
+        font-size: 21px;
+        margin-top: 10px; }
+      .contacts__address-item button {
+        background-color: #00868a;
+        border: none;
+        margin-top: 15px;
+        font-size: 14px;
+        text-transform: uppercase;
+        padding: 12px 25px;
+        color: #fff;
+        cursor: pointer; }
+        .contacts__address-item button:hover {
+          background-color: #005457; }
+
 .header__wrapper {
   position: relative;
   display: flex;
@@ -308,6 +370,8 @@
   .news__tab-content {
     display: none;
     padding: 35px 60px 58px 60px; }
+    .news__tab-content-list li::marker {
+      color: #00868a; }
     .news__tab-content-elem {
       font-size: 14px;
       font-weight: 500;
@@ -318,12 +382,12 @@
       display: block; }
 
 .offer {
-  background: linear-gradient(to bottom, rgba(0, 134, 138, 0.1) 62%, #fff 38%); }
+  background: linear-gradient(to bottom, rgba(0, 134, 138, 0.1) 62%, #fff 38%);
+  margin-top: 100px; }
   .offer__title {
     color: #00868a;
     text-align: center;
-    padding-top: 80px;
-    margin-top: 100px; }
+    padding-top: 80px; }
   .offer__items {
     display: flex;
     justify-content: space-between;

@@ -39,6 +39,13 @@
         &-content {
             display: none;
             padding: 35px 60px 58px 60px;
+            &-list {
+                li {
+                    &::marker {
+                        color: $secondary-color;
+                    }
+                }
+            }
             &-elem {
                 font-size: 14px;
                 font-weight: 500;
