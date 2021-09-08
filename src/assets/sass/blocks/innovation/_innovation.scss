@@ -31,16 +31,8 @@
             display: flex;
             align-items: center;
             margin-top: 25px;
-            &__btn {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 50px;
-                height: 40px;
-                border: 1px solid #fff;
-                cursor: pointer;
-                background-color: transparent;
-                &:hover {
+            &:hover{
+                .innovation__course-details__btn {
                     border-color: darken(#fff, 30%);
                     i {
                         background-color: darken(#fff, 30%);
@@ -52,6 +44,19 @@
                         }
                     }
                 }
+                strong {
+                    color: darken(#fff, 30%);
+                }
+            }
+            &__btn {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 50px;
+                height: 40px;
+                border: 1px solid #fff;
+                cursor: pointer;
+                background-color: transparent;
                 i {
                     position: relative;
                     width: 20px;
@@ -84,9 +89,6 @@
                 color: #fff;
                 margin-left: 20px;
                 cursor: pointer;
-                &:hover {
-                    text-decoration: underline;
-                }
             }
         }
         &-img {

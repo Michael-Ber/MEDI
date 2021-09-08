@@ -114,6 +114,16 @@
       display: flex;
       align-items: center;
       margin-top: 25px; }
+      .innovation__course-details:hover .innovation__course-details__btn {
+        border-color: #b3b3b3; }
+        .innovation__course-details:hover .innovation__course-details__btn i {
+          background-color: #b3b3b3; }
+          .innovation__course-details:hover .innovation__course-details__btn i::after {
+            background-color: #b3b3b3; }
+          .innovation__course-details:hover .innovation__course-details__btn i::before {
+            background-color: #b3b3b3; }
+      .innovation__course-details:hover strong {
+        color: #b3b3b3; }
       .innovation__course-details__btn {
         display: flex;
         justify-content: center;
@@ -123,14 +133,6 @@
         border: 1px solid #fff;
         cursor: pointer;
         background-color: transparent; }
-        .innovation__course-details__btn:hover {
-          border-color: #b3b3b3; }
-          .innovation__course-details__btn:hover i {
-            background-color: #b3b3b3; }
-            .innovation__course-details__btn:hover i::after {
-              background-color: #b3b3b3; }
-            .innovation__course-details__btn:hover i::before {
-              background-color: #b3b3b3; }
         .innovation__course-details__btn i {
           position: relative;
           width: 20px;
@@ -159,8 +161,6 @@
         color: #fff;
         margin-left: 20px;
         cursor: pointer; }
-        .innovation__course-details strong:hover {
-          text-decoration: underline; }
     .innovation__course-img {
       width: 100%;
       margin-top: 45px; }
@@ -275,6 +275,47 @@
     .intro__tab-item:hover {
       transition: .3s all;
       background-color: #41b399; }
+
+.news__tab {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; }
+  .news__tab-head {
+    color: #fff;
+    margin-left: 40px; }
+    .news__tab-head span {
+      background-color: #00868a;
+      padding: 10px 15px; }
+  .news__tab-items {
+    width: 526px;
+    background-color: #4fbfa5;
+    padding-top: 35px; }
+  .news__tab-item {
+    padding: 35px 40px 35px 40px;
+    font-size: 18px;
+    line-height: 27px;
+    color: #fff;
+    cursor: pointer; }
+    .news__tab-item:nth-child(2) {
+      margin-top: 40px; }
+    .news__tab-item_active {
+      background-color: #00868a; }
+    .news__tab-item:hover {
+      background-color: #00868a; }
+  .news__tab-contents {
+    width: 770px;
+    background-color: rgba(0, 134, 138, 0.1); }
+  .news__tab-content {
+    display: none;
+    padding: 35px 60px 58px 60px; }
+    .news__tab-content-elem {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 21px; }
+      .news__tab-content-elem:nth-child(n):not(:last-child) {
+        margin-bottom: 20px; }
+    .news__tab-content_active {
+      display: block; }
 
 .fsz11 {
   font-size: 11px; }
