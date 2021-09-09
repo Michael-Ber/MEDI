@@ -1,4 +1,8 @@
 .footer {
+    padding:  0 0 15px 0;
+    @media(max-width: 1399px) {
+        padding: 0 15px 15px 15px;
+    }
     &__wrapper {
         display: flex;
         justify-content: space-between;
@@ -27,12 +31,17 @@
             height: 40px;
             padding: 0 15px;
             color: #fff;
+            font-size: 14px;
             font-weight: 500;
             text-transform: uppercase;
             background-color: $secondary-color;
             border: none;
             border-radius: 1px;
             cursor: pointer;
+            @media(max-width: 1399px) {
+                font-size: 11px;
+                padding: 0 10px;
+            }
             &:hover {
                 background-color: darken($secondary-color, 5%);
             }

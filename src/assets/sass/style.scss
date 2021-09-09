@@ -22,3 +22,9 @@ body {
     max-width: 1295px;
     margin: 0 auto;
 }
+
+@media(max-width: 1399px) {
+    .container {
+        max-width: 960px;
+    }
+}

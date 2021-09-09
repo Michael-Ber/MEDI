@@ -12,9 +12,17 @@
             }
         }
         &-items {
-            width: 526px;
+            min-width: 526px;
             background-color: $main-color;
             padding-top: 35px;
+            @media(max-width: 1399px) {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: flex-start;
+                min-width: 430px;
+                height: 636px;
+            }
         }
         &-item {            
             padding: 35px 40px 35px 40px;
@@ -33,8 +41,11 @@
             }
         }
         &-contents {
-            width: 770px;
+            min-width: 770px;
             background-color: rgba($secondary-color, .1);
+            @media(max-width: 1399px) {
+                min-width: 530px;
+            }
         }
         &-content {
             display: none;

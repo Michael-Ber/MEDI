@@ -11,10 +11,16 @@
         align-items: flex-start;
         flex-wrap: wrap;
         width: calc(75% - 25px);
+        @media(max-width: 1399px) {
+            justify-content: center;
+        }
     }
     &__link {
         margin-right: 190px;
         margin-bottom: 30px;
+        @media(max-width: 1399px) {
+            margin-right: 30px;
+        }
         &:nth-child(3n+3) {
             margin-right: 10px;
         }

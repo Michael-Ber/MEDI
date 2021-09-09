@@ -1,6 +1,9 @@
 .offer {
     background: linear-gradient(to bottom, rgba($secondary-color, .1) 62%, #fff 38%);
     margin-top: 100px;
+    @media(max-width: 1399px) {
+        background: rgba($secondary-color, .1);
+    }
     &__title {
         color: $secondary-color;
         text-align: center;
@@ -8,12 +11,21 @@
     }
     &__items {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: flex-start;
+        flex-wrap: wrap;
         margin-top: 60px;
         &-elem {
             position: relative;
             width: 306px;
+            @media(max-width: 1399px) {
+                &:nth-child(2n - 1) {
+                    margin-right: 25px;
+                }
+                &:nth-child(-n + 2) {
+                    margin-bottom: 25px;
+                }
+            }
             &-head {
                 position: absolute;
                 top: 30px;
@@ -25,7 +37,8 @@
                 }
             }
             &-img {
-                height: 220px;
+                width: 306px;
+                height: 230px;
                 img {
                     width: 100%;
                     height: 100%;
