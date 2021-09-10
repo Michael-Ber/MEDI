@@ -38,3 +38,8 @@ body {
         max-width: 576px;
     }             
 }
+@media(max-width: 575px) {
+    .container {
+        max-width: 100%;
+    }             
+}

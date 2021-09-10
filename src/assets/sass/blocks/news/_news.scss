@@ -3,12 +3,18 @@
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
+        @media(max-width: 575px) {
+            flex-direction: column;     
+        }
         &-head {
             color: #fff;
             margin-left: 40px;
             span {
                 background-color: $secondary-color;
                 padding: 10px 15px;
+            }
+            @media(max-width: 575px) {
+                margin-bottom: 30px;     
             }
         }
         &-items {
@@ -22,17 +28,20 @@
                 justify-content: space-around;
                 align-items: flex-start;
                 min-width: 430px;
-                height: 636px;
+                height: 594px;
             }
             @media(max-width: 991px) {
                 min-width: 300px;  
                 font-size: 16px;   
-                height: 629px;        
+                height: 636px;        
             }
             @media(max-width: 767px) {
                 min-width: 230px; 
-                height: 613px;  
+                height: 619px;  
                 justify-content: space-between;          
+            }
+            @media(max-width: 575px) {
+                height: unset;    
             }
         }
         &-item {            
@@ -68,6 +77,9 @@
             @media(max-width: 767px) {
                 min-width: 346px;             
             }
+            @media(max-width: 575px) {
+                min-width: 100%;     
+            }
         }
         &-content {
             display: none;
@@ -87,7 +99,7 @@
             &-list {
                 margin: 0;
                 padding: 0;
-                margin-top: 25px;
+                margin-top: 32px;
                 li {
                     &::marker {
                         color: $secondary-color;

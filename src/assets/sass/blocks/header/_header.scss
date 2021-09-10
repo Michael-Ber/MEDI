@@ -9,6 +9,11 @@
         @media(max-width: 991px) {
             justify-content: space-around;
         }
+        @media(max-width: 575px) {
+            justify-content: space-between;
+            flex-wrap: wrap;
+            height: unset;           
+        }
     }
     &__logo {
         display: flex;
@@ -53,6 +58,11 @@
             &:nth-child(4) {
                 order: 3;
             }
+        }
+        @media(max-width: 575px) {
+            &:nth-child(4) {
+                display: none;
+            }          
         }
         &:first-child {
             &::before {
@@ -146,6 +156,9 @@
         background-color: rgba(#000, .9);
         @media(max-width: 991px) {
             order: 2;
+        }
+        @media(max-width: 575px) {
+            width: 100%;           
         }
         &-elem {
             display: flex;
