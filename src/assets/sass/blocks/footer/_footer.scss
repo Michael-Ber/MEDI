@@ -7,9 +7,16 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @media(max-width: 991px) {
+            flex-wrap: wrap;
+            justify-content: space-around;            
+        }
     }
     &__item {
         width: 25%;
+        @media(max-width: 991px) {
+            width: 30%;            
+        }
         &-socials {
             display: flex;
             justify-content: space-around;
@@ -41,6 +48,9 @@
             @media(max-width: 1399px) {
                 font-size: 11px;
                 padding: 0 10px;
+            }
+            @media(max-width: 991px) {
+                padding: 0 8px;            
             }
             &:hover {
                 background-color: darken($secondary-color, 5%);

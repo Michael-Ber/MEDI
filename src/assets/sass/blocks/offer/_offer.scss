@@ -4,10 +4,27 @@
     @media(max-width: 1399px) {
         background: rgba($secondary-color, .1);
     }
+    @media(max-width: 991px) {
+        margin-top: 50px;            
+    }
+    @media(max-width: 767px) {
+        margin-top: 30px;            
+    }
     &__title {
         color: $secondary-color;
+        font-size: 48px;
         text-align: center;
-        padding-top: 80px;
+        padding-top: 80px;            
+        margin: 0;           
+
+        @media(max-width: 991px) {
+            font-size: 36px;
+            padding-top: 50px;            
+        }
+        @media(max-width: 767px) {
+            font-size: 32px;
+            padding-top: 25px;
+        }
     }
     &__items {
         display: flex;
@@ -15,6 +32,9 @@
         align-items: flex-start;
         flex-wrap: wrap;
         margin-top: 60px;
+        @media(max-width: 767px) {
+            margin-top: 40px;
+        }
         &-elem {
             position: relative;
             width: 306px;
@@ -24,6 +44,17 @@
                 }
                 &:nth-child(-n + 2) {
                     margin-bottom: 25px;
+                }
+            }
+            @media(max-width: 767px) {
+                &:nth-child(2n - 1) {
+                    margin-right: 0;
+                }
+                &:nth-child(-n + 2) {
+                    margin-bottom: 0;
+                }
+                &:nth-child(n) {
+                    margin-bottom: 20px;
                 }
             }
             &-head {
@@ -51,6 +82,7 @@
                 align-items: center;
                 background-color: $secondary-color;
                 padding: 25px 30px;
+                
                 &:hover{
                     .offer__items-elem-details__btn {
                         border-color: darken(#fff, 30%);
@@ -106,7 +138,11 @@
                 }
                 strong {
                     color: #fff;
+                    font-size: 21px;
                     cursor: pointer;
+                    @media(max-width: 991px) {
+                        font-size: 18px;            
+                    }
                 }
             }
         }

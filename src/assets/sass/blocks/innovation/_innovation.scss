@@ -1,5 +1,8 @@
 .innovation {
     padding: 80px 0;
+    @media(max-width: 991px) {
+        padding: 40px 0;            
+    }
     &__wrapper {
         display: flex;
         justify-content: space-between;
@@ -15,8 +18,17 @@
         @media(max-width: 1399px) {
             width: 380px;
         }
+        @media(max-width: 991px) {
+           width: 300px;             
+        }
+        @media(max-width: 767px) {
+            width: 240px;            
+        }
         &-content {
             padding: 35px 0 0 40px;
+            @media(max-width: 767px) {
+                padding: 35px 0 0 10px;            
+            }
         }
         &-head {
             span {
@@ -29,10 +41,19 @@
             color: #fff;
             line-height: 40px;
             margin-top: 30px;
+            @media(max-width: 767px) {
+                margin-top: 25px;            
+            }
             span {
                 font-size: 30px;
                 @media(max-width: 1399px) {
                     font-size: 20px;
+                }
+                @media(max-width: 991px) {
+                    font-size: 17px;            
+                }
+                @media(max-width: 767px) {
+                    font-size: 14px;            
                 }
             }
         }
@@ -40,6 +61,9 @@
             display: flex;
             align-items: center;
             margin-top: 25px;
+            @media(max-width: 767px) {
+                margin-top: 20px;            
+            }
             &:hover{
                 .innovation__course-details__btn {
                     border-color: darken(#fff, 30%);
@@ -55,6 +79,7 @@
                 }
                 strong {
                     color: darken(#fff, 30%);
+                    
                 }
             }
             &__btn {
@@ -66,6 +91,9 @@
                 border: 1px solid #fff;
                 cursor: pointer;
                 background-color: transparent;
+                @media(max-width: 991px) {
+                    transform: scale(.7);            
+                }
                 i {
                     position: relative;
                     width: 20px;
@@ -102,11 +130,18 @@
                 @media(max-width: 1399px) {
                     font-size: 14px;
                 }
+                @media(max-width: 991px) {
+                    font-size: 12px;  
+                    margin-left: 10px;          
+                }
             }
         }
         &-img {
             width: 100%;
             margin-top: 45px;
+            @media(max-width: 767px) {
+                margin-top: 30px;            
+            }
             img {
                 display: block;
                 width: 100%;
@@ -121,10 +156,12 @@
         @media(max-width: 1399px) {
             width: 515px;
         }
-        &-wrapper {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
+        @media(max-width: 991px) {
+            width: 440px;             
+        }
+        @media(max-width: 767px) {
+            width: 336px;
+            padding-left: 20px;            
         }
         &-head {
             span {
@@ -139,13 +176,20 @@
             align-items: center;
             position: relative;
             margin-top: 50px;
+            @media(max-width: 767px) {
+                margin-top: 25px;            
+            }
         }
         &-amount {
+            @media(max-width: 767px) {
+                margin-top: 40px;             
+            }
             &__item {
                 display: flex;
                 justify-content: flex-start;
                 align-items: center;
                 position: relative;
+                z-index: 10;
                 &-num {
                     font-size: 48px;
                     color: rgba(#000, .3);
@@ -156,6 +200,9 @@
                     font-size: 14px;
                     line-height: 21px;
                     color: rgba(#000, .3);
+                    @media(max-width: 991px) {
+                        color: rgba(#000, .7);            
+                    }
                 }
                 &:nth-child(n):not(:last-child) {
                     margin-bottom: 35px;
@@ -165,6 +212,10 @@
                         font-size: 96px;
                         font-weight: 500;
                         color: $secondary-color;
+                        @media(max-width: 991px) {
+                            font-size: 65px;
+                            top: -24px;             
+                        }
                     }
                     .innovation__patent-amount__item-text {
                         width: 50%;
@@ -172,7 +223,10 @@
                         font-size: 28px;
                         font-weight: 500;
                         line-height: 42px;
-                        z-index: 10;
+                        @media(max-width: 767px) {
+                            font-size: 17px;
+                            line-height: 25px;             
+                        }
                     }
                 }
             }
@@ -182,6 +236,22 @@
             top: -10px;
             right: 0;
             z-index: 5;
+            width: 306px;
+            height: 400px;
+            @media(max-width: 991px) {
+                top: -24px;             
+            }
+            @media(max-width: 767px) {
+                width: 250px;
+                height: 320px;
+                top: 40px;            
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+            
         }
     }
 }

@@ -15,6 +15,7 @@
             min-width: 526px;
             background-color: $main-color;
             padding-top: 35px;
+            font-size: 18px;
             @media(max-width: 1399px) {
                 display: flex;
                 flex-direction: column;
@@ -23,15 +24,30 @@
                 min-width: 430px;
                 height: 636px;
             }
+            @media(max-width: 991px) {
+                min-width: 300px;  
+                font-size: 16px;   
+                height: 629px;        
+            }
+            @media(max-width: 767px) {
+                min-width: 230px; 
+                height: 613px;  
+                justify-content: space-between;          
+            }
         }
         &-item {            
-            padding: 35px 40px 35px 40px;
-            font-size: 18px;
+            padding: 35px 40px;
             line-height: 27px;
             color: #fff;
             cursor: pointer;
+            @media(max-width: 767px) {
+                padding: 20px 20px;             
+            }
             &:nth-child(2) {
                 margin-top: 40px;
+                @media(max-width: 767px) {
+                    margin-top: 0;             
+                }
             }
             &_active {
                 background-color: $secondary-color;
@@ -46,11 +62,32 @@
             @media(max-width: 1399px) {
                 min-width: 530px;
             }
+            @media(max-width: 991px) {
+                min-width: 468px;             
+            }
+            @media(max-width: 767px) {
+                min-width: 346px;             
+            }
         }
         &-content {
             display: none;
             padding: 35px 60px 58px 60px;
+            @media(max-width: 767px) {
+                padding: 25px 25px 40px 40px;            
+            }
+            strong {
+                font-size: 24px;
+                @media(max-width: 991px) {
+                    font-size: 18px;            
+                }
+                @media(max-width: 767px) {
+                    font-size: 16px;            
+                }
+            }
             &-list {
+                margin: 0;
+                padding: 0;
+                margin-top: 25px;
                 li {
                     &::marker {
                         color: $secondary-color;
@@ -61,6 +98,9 @@
                 font-size: 14px;
                 font-weight: 500;
                 line-height: 21px;
+                @media(max-width: 767px) {
+                    font-size: 12px;            
+                }
                 &:nth-child(n):not(:last-child) {
                     margin-bottom: 20px;
                 }

@@ -1,10 +1,14 @@
 .header {
+    position: relative;
     &__wrapper {
         position: relative;
         display: flex;
         justify-content: space-around;
         align-items: center;
         height: 90px;
+        @media(max-width: 991px) {
+            justify-content: space-around;
+        }
     }
     &__logo {
         display: flex;
@@ -28,6 +32,7 @@
             @media(max-width: 1399px) {
                 width: 50px;
             }
+            
         }
     }
     &__elem {
@@ -37,6 +42,18 @@
         position: relative;
         height: 100%;
         cursor: pointer;
+        @media(max-width: 991px) {
+            display: none;
+            &:nth-child(1), &:nth-child(4) {
+                display: flex;
+            }
+            &:nth-child(1) {
+                order: 1;
+            }
+            &:nth-child(4) {
+                order: 3;
+            }
+        }
         &:first-child {
             &::before {
                 content: '';
@@ -46,6 +63,9 @@
                 top: 0;
                 left: -25px;
                 background-color: rgba(#c4c4c4, .5); 
+                @media(max-width: 991px) {
+                    display: none;
+                }
             }
         }
         &::after {
@@ -58,6 +78,9 @@
             background-color: rgba(#c4c4c4, .5); 
             @media(max-width: 1399px) {
                 right: -15px;
+            }
+            @media(max-width: 991px) {
+                display: none;
             }
         }
         .medi {
@@ -89,6 +112,69 @@
             @media(max-width: 1399px) {
                 font-size: 12px;
             }
+        }
+    }
+    &__burger {
+        display: none;
+        cursor: pointer;
+        span {
+            display: block;
+            width: 20px;
+            height: 2px;
+            background-color: #000;
+            &:nth-child(n):not(:last-child) {
+                margin-bottom: 4px;
+            }
+        }
+        @media(max-width: 991px) {
+            display: block;
+            order: 2;
+        }
+    }
+    &__shortmenu {
+        display: none;
+        position: relative;
+        height: 100vh;
+        justify-content: space-around;
+        align-items: flex-start;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        padding: 20px;
+        background-color: rgba(#000, .9);
+        @media(max-width: 991px) {
+            order: 2;
+        }
+        &-elem {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            &-tel {
+                text-decoration: none;
+                color: #fff;
+                margin-left: 20px;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+        &-socials {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            &-item {
+                margin-right: 20px;
+            }
+        }
+        &-close {
+            color: #fff;
+            font-size: 50px;
+            position: absolute;
+            top: 0;
+            right: 20px;
         }
     }
     &__saloons {
