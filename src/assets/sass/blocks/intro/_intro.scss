@@ -1,7 +1,7 @@
 .intro {
     background-color: $main-color;
     padding-top: 30px;
-    &__links {
+    &__tablinks {
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -19,26 +19,36 @@
             flex-wrap: wrap;           
         }
     }
-    &__link {
+    &__tablink {
         text-decoration: none;
         color: #fff;
         padding: 10px 15px;            
         transition: .3s all;
+        cursor: pointer;
+        @media(max-width: 767px) {
+            padding: 10px 10px;
+        }
         &:hover, &:focus {
             color: #000;
             background-color: #fff;
         }
-        @media(max-width: 767px) {
-            padding: 10px 10px;
+        &_active {
+            color: #000;
+            background-color: #fff;
         }
     }
     &__tab-content {
         margin-top: 30px;
-        &-1, &-3 {
+        &-elem {
             display: none;
         }
+        &_active {
+            display: block;
+        }
+        
     }
     &__swiper {
+        position: relative;
         &-slide {
             display: flex;
             justify-content: space-between;
@@ -47,13 +57,14 @@
                 flex-direction: column;           
             }
             &-text {
-                width: 30%;
+                width: 400px;
                 color: #fff;
-                @media(max-width: 767px) {
-                    width: 50%;           
+                @media(max-width: 1399px) {
+                    width: 230px;  
                 }
                 @media(max-width: 575px) {
-                    width: 100%;           
+                    width: 100%; 
+                    margin-bottom: 50px;          
                 }
                 &-btn {
                     background-color: $secondary-color;
@@ -109,9 +120,17 @@
             }
             &-image {
                 display: flex;
-                width: 70%;
+                width: 746px;
+                height: 533px;
+                @media(max-width: 1399px) {
+                    width: 700px;  
+                }
+                @media(max-width: 991px) {
+                    width: 510px;  
+                }
                 @media(max-width: 767px) {
-                    width: 50%;            
+                    width: 340px;
+                    margin-bottom: 50px;            
                 }
                 @media(max-width: 575px) {
                     width: 100%;           
@@ -123,8 +142,61 @@
                 }
             }
         }
+        &-button {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            bottom: 60px;
+            width: 60px;
+            height: 50px;
+            border: 1px solid #fff;
+            cursor: pointer;
+            &:hover {
+                border-color: darken(#fff, 20%);
+                span {
+                    background-color: darken(#fff, 20%);
+                }
+            }
+            span {
+                position: relative;
+                width: 30px;
+                height: 1px;
+                background-color: #fff;
+                &::before {
+                    content: '';
+                    display: block;
+                    height: 8px;
+                    width: 1px;
+                    background-color: #fff;
+                    transform: rotate(-45deg);
+                    position: absolute;
+                    top: 0;
+                    left: 3px;
+                }
+                &::after {
+                    content: '';
+                    display: block;
+                    height: 8px;
+                    width: 1px;
+                    background-color: #fff;
+                    transform: rotate(45deg);
+                    position: absolute;
+                    top: -7px;
+                    left: 3px;
+                }
+                
+            }
+            &_prev {
+                left: 371px;
+            }
+            &_next {
+                left: 432px;
+                transform: rotate(180deg);
+            }
+        }
     }
-    &__tabs {
+    &__links {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -132,7 +204,7 @@
             background-color: darken($main-color, 5%);;
         }
     }
-    &__tab-item {
+    &__link-item {
         flex-grow: 1;
         text-align: center;
         font-size: 21px;
