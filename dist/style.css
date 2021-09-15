@@ -1,3 +1,9 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
 .contacts {
   padding-top: 100px; }
   @media (max-width: 991px) {
@@ -451,7 +457,8 @@
     .innovation__course-details {
       display: flex;
       align-items: center;
-      margin-top: 25px; }
+      margin-top: 25px;
+      text-decoration: none; }
       @media (max-width: 767px) {
         .innovation__course-details {
           margin-top: 20px; } }
@@ -661,11 +668,15 @@
   .intro__tab-content {
     margin-top: 30px; }
     .intro__tab-content-elem {
-      display: none; }
+      display: none;
+      transition: .5s all;
+      animation: fadeIn 1s; }
     .intro__tab-content_active {
       display: block; }
   .intro__swiper {
-    position: relative; }
+    position: relative;
+    width: 1295px;
+    height: 590px; }
     .intro__swiper-slide {
       display: flex;
       justify-content: space-between;
@@ -757,6 +768,7 @@
       justify-content: center;
       align-items: center;
       bottom: 60px;
+      top: unset;
       width: 60px;
       height: 50px;
       border: 1px solid #fff;
@@ -792,9 +804,13 @@
           left: 3px; }
       .intro__swiper-button_prev {
         left: 371px; }
+        .intro__swiper-button_prev::after {
+          content: ''; }
       .intro__swiper-button_next {
         left: 432px;
         transform: rotate(180deg); }
+        .intro__swiper-button_next::after {
+          content: ''; }
   .intro__links {
     display: flex;
     justify-content: center;
@@ -915,7 +931,8 @@
         min-width: 100%; } }
   .news__tab-content {
     display: none;
-    padding: 35px 60px 58px 60px; }
+    padding: 35px 60px 58px 60px;
+    animation: fadeIn 1s; }
     @media (max-width: 767px) {
       .news__tab-content {
         padding: 25px 25px 40px 40px; } }
@@ -1018,7 +1035,8 @@
         justify-content: center;
         align-items: center;
         background-color: #00868a;
-        padding: 25px 30px; }
+        padding: 25px 30px;
+        text-decoration: none; }
         .offer__items-elem-details:hover .offer__items-elem-details__btn {
           border-color: #b3b3b3; }
           .offer__items-elem-details:hover .offer__items-elem-details__btn i {

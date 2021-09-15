@@ -39,8 +39,11 @@
     }
     &__tab-content {
         margin-top: 30px;
+        
         &-elem {
             display: none;
+            transition: .5s all;
+            animation: fadeIn 1s;
         }
         &_active {
             display: block;
@@ -49,6 +52,8 @@
     }
     &__swiper {
         position: relative;
+        width: 1295px;
+        height: 590px;
         &-slide {
             display: flex;
             justify-content: space-between;
@@ -148,6 +153,7 @@
             justify-content: center;
             align-items: center;
             bottom: 60px;
+            top: unset;
             width: 60px;
             height: 50px;
             border: 1px solid #fff;
@@ -189,10 +195,16 @@
             }
             &_prev {
                 left: 371px;
+                &::after {
+                    content: '';
+                }
             }
             &_next {
                 left: 432px;
                 transform: rotate(180deg);
+                &::after {
+                    content: '';
+                }
             }
         }
     }

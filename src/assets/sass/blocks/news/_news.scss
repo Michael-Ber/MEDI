@@ -84,6 +84,7 @@
         &-content {
             display: none;
             padding: 35px 60px 58px 60px;
+            animation: fadeIn 1s;
             @media(max-width: 767px) {
                 padding: 25px 25px 40px 40px;            
             }
